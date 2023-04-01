@@ -32,6 +32,14 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+
+        <hr>
+
+        <div class="flex items-center justify-end mt-4">
+            <a href="{{ url('login/google') }}">
+                <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+            </a>
+        </div>
         
         @include('auth.partials.copy')
     </form>

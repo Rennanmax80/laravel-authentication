@@ -33,6 +33,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/login', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
 
+
+        /* Google Social Login */
+        Route::get('/login/google', 'GoogleLoginController@redirect')->name('login.google-redirect');
+        Route::get('/login/google/callback', 'GoogleLoginController@callback')->name('login.google-callback');
     });
 
     Route::group(['middleware' => ['auth']], function() {
